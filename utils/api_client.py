@@ -21,3 +21,7 @@ class APIClient:
 
 	def patch_user(self,user_id,payload):
 		return requests.patch(f"{self.url}/users/{user_id}", json=payload)
+
+	def get_invalid_endpoint(self):
+		return requests.get(f"{self.url}/invalid")
+
